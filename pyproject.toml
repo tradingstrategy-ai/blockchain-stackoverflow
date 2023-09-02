@@ -12,6 +12,8 @@ python = "^3.11"
 pandas = "^2.1.0"
 ipython = "^8.15.0"
 notebook = "^7.0.3"
+ipdb = "^0.13.13"
+fastparquet = "^2023.8.0"
 
 
 [build-system]

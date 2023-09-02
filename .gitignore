@@ -3,3 +3,4 @@
 *.7z.1
 stackexchange-xml-converter
 *.xml
+csv/*
