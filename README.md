@@ -2,7 +2,7 @@
 
 Scripts to explore and plot out data for blockchain developer communities.
 
-- [Original data dumps](https://archive.org/download/stackexchange)
+- [Original data dumps](https://archive.org/details/stackexchange)
 - [Stackoverflow data dump XML to CSV data converter](https://github.com/SkobelevIgor/stackexchange-xml-converter)
 - [Stackoverflow stops distributing data dumps](https://meta.stackoverflow.com/a/425121/315168)
 - [The fall of StackOverlow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow)  

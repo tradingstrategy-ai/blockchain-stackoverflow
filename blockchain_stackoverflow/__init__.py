@@ -19,13 +19,11 @@ def load_matplotlib_local_fonts():
     prop = font_manager.FontProperties(fname=font_path)
 
     matplotlib.rc('font', family='sans-serif') 
-    #matplotlib.rc('font', serif='Humor Sans') 
-    #matplotlib.rc('text', usetex='false') 
     matplotlib.rcParams.update({
         'font.size': 16,
         'font.sans-serif': prop.get_name(),
     })
-    print(prop.get_name())
+    
 
 
 def entertain_me():

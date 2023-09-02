@@ -54,6 +54,10 @@ INTERESTING_TAGS = {
     "smartcontracts",
     "tron",
     "hyperledger",
+    "scrypto",
+    "move-lang",
+    "aptos",
+    "sui",
 }
 
 df = pd.read_csv("csv/Tags.csv")
