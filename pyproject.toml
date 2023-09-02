@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "blockchain-stackoverflow"
+version = "0.1.0"
+description = "Scripts to explore Stackoverflow data for various blockchains"
+authors = ["Mikko Ohtamaa <mikko@opensourcehacker.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "blockchain_stackoverflow"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
