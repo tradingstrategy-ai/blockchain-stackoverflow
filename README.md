@@ -5,9 +5,9 @@ Scripts to explore and plot out data for blockchain developer communities.
 - [Original data dumps](https://archive.org/download/stackexchange)
 - [Stackoverflow data dump XML to CSV data converter](https://github.com/SkobelevIgor/stackexchange-xml-converter)
 - [Stackoverflow stops distributing data dumps](https://meta.stackoverflow.com/a/425121/315168)
-  and 
+- [The fall of StackOverlow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow)  
 
-Dataset size is ~40 GB.
+Dataset size is ~40 GB and you are going some ~200 GB free disk space to work on this.
 
 # Usage
 
@@ -23,7 +23,7 @@ wget https://archive.org/download/stackexchange/stackoverflow.com-PostHistory.7z
 wget https://archive.org/download/stackexchange/stackoverflow.com-Tags.7z
 ```
 
-## Tags
+## Creating tag map
 
 First we need to create tag name -> primary key mappings
 we can use to navigate the StackOverflow posts dump.
@@ -84,3 +84,39 @@ foundry-forge with 2 posts
 foundry-rs with 1 posts
 ```
 
+## Extracting the large dataset
+
+We now need to get all StackOverflow questions to a CSV file.
+
+```shell
+
+```
+
+## Creating StackOverflow question count baseline 
+
+Because [StackOverflow is in decline]() we need to separate
+this StackOverflow's decline from the possible blockchains decline.
+
+For this purpose, we create a time-series that contains monthly
+binned question counts of all StackOverflow posts.
+
+We do this with our notebook, which is also going to display 
+a graph of the question counts:
+
+```shell
+ipython blockchain_stackoverflow/baseline.ipynb
+```
+
+## Creating tagged questions only dataset
+
+
+- Because the full StackOverflow dataset is too large to fit into the RAM,
+  we create a smaller dataset that contains data for questions 
+  only on our tag list
+- We do this by filtering out CSV data chunk by chunk
+- We dump the resulting dataset to a Parquest file
+- Any further analysis is done on this reduced dataset  
+
+```shell
+ipython blockchain_stackoverflow/tag-only-data.ipynb
+``
