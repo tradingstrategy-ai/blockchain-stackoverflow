@@ -84,11 +84,19 @@ foundry-forge with 2 posts
 foundry-rs with 1 posts
 ```
 
-## Extracting the large dataset
+## Downloading and extracting the full posts dataset
 
 We now need to get all StackOverflow questions to a CSV file.
 
+Download using torrent, and this way you do not die
+to the old age waiting for the download to finish.
+
 ```shell
+cd download
+npm install
+node_modules/.bin/webtorrent --select stackoverflow.com-Posts.7z stackexchange_archive.torrent 
+# 658 = index for Posts.7z
+node_modules/.bin/webtorrent --select 658 stackexchange_archive.torrent 
 
 ```
 

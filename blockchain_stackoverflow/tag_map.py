@@ -58,6 +58,7 @@ INTERESTING_TAGS = {
     "move-lang",
     "aptos",
     "sui",
+    "diem",
 }
 
 df = pd.read_csv("csv/Tags.csv")

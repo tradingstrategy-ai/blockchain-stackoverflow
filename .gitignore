@@ -5,4 +5,5 @@ stackexchange-xml-converter
 *.xml
 csv/*
 __pycache__
-
+node_modules
+.__*
