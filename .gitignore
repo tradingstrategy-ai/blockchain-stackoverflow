@@ -4,3 +4,5 @@
 stackexchange-xml-converter
 *.xml
 csv/*
+__pycache__
+

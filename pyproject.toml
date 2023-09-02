@@ -14,6 +14,8 @@ ipython = "^8.15.0"
 notebook = "^7.0.3"
 ipdb = "^0.13.13"
 fastparquet = "^2023.8.0"
+ipykernel = "^6.25.1"
+matplotlib = "^3.7.2"
 
 
 [build-system]

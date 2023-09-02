@@ -44,8 +44,8 @@ INTERESTING_TAGS = {
     "chainlink",
     "matic",
     "binance",
-    "svelte",
-    "sveltekit",
+    # "svelte",  benchmark tags
+    # "sveltekit",  benchmark tags
     "hardhat",
     "truffle",
     "brownie",
