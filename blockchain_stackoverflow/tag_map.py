@@ -57,7 +57,6 @@ INTERESTING_TAGS = {
     "metamask",
     "decentralized-applications",
     "cryptocurrency",
-    "bitcoin",
     "hedera",
     "hedera-hashgraph",
     "cardano",

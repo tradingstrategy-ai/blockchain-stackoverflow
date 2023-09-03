@@ -16,7 +16,9 @@ Check out files:
 ```shell
 git clone ...
 cd blockchain-stackoverflow
+git lfs install
 git lfs fetch
+git lfs checkout
 ```
 
 Create Python environment:
