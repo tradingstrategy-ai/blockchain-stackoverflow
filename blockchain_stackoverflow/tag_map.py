@@ -31,7 +31,7 @@ INTERESTING_TAGS = {
     "foundry-forge",
     "cosmos",
     "cosmos-sdk",
-    "tendermind",
+    "tendermint",
     # "cosmwasm",  Too new
     "polkadot",
     "polkadot-js",
@@ -88,6 +88,9 @@ INTERESTING_TAGS = {
     "smartcontracts",
     "tron",
     "hyperledger",
+    "hyperledger-fabric",
+    "hyperledger-composer",
+    "hyperledger-chaincode",
     "scrypto",
     "move-lang",
     "aptos",
