@@ -8,6 +8,7 @@ Scripts to explore and plot out data for blockchain developer communities.
 - [The fall of StackOverlow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow)  
 
 Dataset size is ~40 GB and you are going some ~200 GB free disk space to work on this.
+I recommend you work on a remote server using Visual Studio Code remote extensions.
 
 # Usage
 
@@ -88,7 +89,7 @@ foundry-rs with 1 posts
 
 We now need to get all StackOverflow questions to a CSV file.
 
-Download using torrent, and this way you do not die
+Download using Bittorrent, and this way you do not die
 to the old age waiting for the download to finish.
 
 ```shell
@@ -97,8 +98,19 @@ npm install
 node_modules/.bin/webtorrent --select stackoverflow.com-Posts.7z stackexchange_archive.torrent 
 # 658 = index for Posts.7z
 node_modules/.bin/webtorrent --select 658 stackexchange_archive.torrent 
-
 ```
+
+![Webtorrent downloading](screenshots/webtorrent.png)
+
+And then after two hours:
+
+```shell
+7z x download/stackexchange/stackoverflow.com-Posts.7z
+./converter --source-path Posts.xml --result-format csv --store-to-dir csv
+ipython create-reduced-dataset.ipynb
+```
+
+Now we have `blockchain-posts.parquet`.
 
 ## Creating StackOverflow question count baseline 
 
@@ -116,7 +128,6 @@ ipython blockchain_stackoverflow/baseline.ipynb
 ```
 
 ## Creating tagged questions only dataset
-
 
 - Because the full StackOverflow dataset is too large to fit into the RAM,
   we create a smaller dataset that contains data for questions 
