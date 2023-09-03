@@ -14,8 +14,10 @@ import pandas as pd
 INTERESTING_TAGS = {
     "ethereum",
     "evm",
+    "erc20",
     "solidity",
     "vyper",
+    "assemblyscript",
     "web3js",
     "ethers.js",
     "web3py",
@@ -29,6 +31,7 @@ INTERESTING_TAGS = {
     "foundry-forge",
     "cosmos",
     "cosmos-sdk",
+    "tendermind",
     # "cosmwasm",  Too new
     "polkadot",
     "polkadot-js",
@@ -68,10 +71,12 @@ INTERESTING_TAGS = {
     "uniswap",
     "pancakeswap",
     "chainlink",
+    "thegraph",
     "gnosis-safe",
     "matic",
     "binance",
     "coinbase-api",
+    "kraken.com",
     "etherscan",
     # "svelte",  benchmark tags
     # "sveltekit",  benchmark tags
@@ -94,6 +99,11 @@ INTERESTING_TAGS = {
     "eos",
     "litecoin",
     "dogecoin-api",
+    "filecoin",
+    # arweave no questions
+    # storj no questions
+    "bigchaindb",
+
 
 }
 
