@@ -21,7 +21,6 @@ We need
 - Tags dataset
 
 ```shell
-wget https://archive.org/download/stackexchange/stackoverflow.com-PostHistory.7z
 wget https://archive.org/download/stackexchange/stackoverflow.com-Tags.7z
 ```
 
@@ -114,6 +113,17 @@ ipython create-reduced-dataset.ipynb  # Or run in Visual Studio Code
 
 Now we have created [blockchain-posts.parquet](./blockchain-posts.parquet).
 
+## Creating blockchain questions only reduced dataset
+
+As the full posts dataset is too large to read in RAM,
+we will use a chunked reader to create a smaller dataset
+of 25k blockchain questions weighting around 25 MB.
+
+```shell
+ipython create-reduced-dataset.ipynb  # Or use Visual Studio Code
+```
+
+
 ## Creating StackOverflow question count baseline 
 
 Because [StackOverflow is in decline]() we need to separate
@@ -126,18 +136,5 @@ We do this with our notebook, which is also going to display
 a graph of the question counts:
 
 ```shell
-ipython blockchain_stackoverflow/baseline.ipynb
+ipython create-baseline.ipynb  # Or use Visual Studio Code
 ```
-
-## Creating tagged questions only dataset
-
-- Because the full StackOverflow dataset is too large to fit into the RAM,
-  we create a smaller dataset that contains data for questions 
-  only on our tag list
-- We do this by filtering out CSV data chunk by chunk
-- We dump the resulting dataset to a Parquest file
-- Any further analysis is done on this reduced dataset  
-
-```shell
-ipython blockchain_stackoverflow/tag-only-data.ipynb
-``
