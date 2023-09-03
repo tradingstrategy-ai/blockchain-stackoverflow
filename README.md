@@ -6,6 +6,7 @@ Scripts to explore and plot out data for blockchain developer communities.
 - [Stackoverflow data dump XML to CSV data converter](https://github.com/SkobelevIgor/stackexchange-xml-converter)
 - [Stackoverflow stops distributing data dumps](https://meta.stackoverflow.com/a/425121/315168)
 - [The fall of StackOverlow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow)  
+- This repo uses `git-lfs`
 
 Dataset size is ~40 GB and you are going some ~200 GB free disk space to work on this.
 I recommend you work on a remote server using Visual Studio Code remote extensions.
@@ -108,10 +109,10 @@ And then after two hours:
 7z x download/stackexchange/stackoverflow.com-Posts.7z
 ./converter --source-path Posts.xml --result-format csv --store-to-dir csv
 rm Posts.xml  # Save 95 GB space
-ipython create-reduced-dataset.ipynb
+ipython create-reduced-dataset.ipynb  # Or run in Visual Studio Code
 ```
 
-Now we have `blockchain-posts.parquet`.
+Now we have created [blockchain-posts.parquet](./blockchain-posts.parquet).
 
 ## Creating StackOverflow question count baseline 
 
