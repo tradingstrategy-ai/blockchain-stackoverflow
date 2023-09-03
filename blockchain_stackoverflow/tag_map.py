@@ -30,6 +30,9 @@ INTERESTING_TAGS = {
     "cosmos",
     "cosmos-sdk",
     # "cosmwasm",  Too new
+    "polkadot",
+    "polkadot-js",
+    "substrate",
     "elrond",
     # "polygon", Invalid because questions about polygon math
     "solana",
@@ -52,6 +55,7 @@ INTERESTING_TAGS = {
     "decentralized-applications",
     "cryptocurrency",
     "bitcoin",
+    "hedera",
     "hedera-hashgraph",
     "cardano",
     "nearprotocol",
@@ -64,6 +68,7 @@ INTERESTING_TAGS = {
     "uniswap",
     "pancakeswap",
     "chainlink",
+    "gnosis-safe",
     "matic",
     "binance",
     "coinbase-api",
