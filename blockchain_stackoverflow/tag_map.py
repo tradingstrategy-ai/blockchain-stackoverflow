@@ -16,6 +16,7 @@ INTERESTING_TAGS = {
     "evm",
     "erc20",
     "solidity",
+    "web3",
     "vyper",
     "assemblyscript",
     "web3js",
@@ -105,31 +106,34 @@ INTERESTING_TAGS = {
     # arweave no questions
     # storj no questions
     "bigchaindb",
-
-
 }
 
-df = pd.read_csv("csv/Tags.csv")
+def main():
 
-# tag id -> tag data maps
-out_tags: list[dict] = {}
+    df = pd.read_csv("csv/Tags.csv")
 
-# Use StackOverflow primary key as the tag dataframe index
-df.set_index(df["Id"])
+    # tag id -> tag data maps
+    out_tags: list[dict] = {}
 
-filtered_df: pd.DataFrame
-filtered_df = df.loc[
-    df["TagName"].isin(INTERESTING_TAGS)
-    ]
+    # Use StackOverflow primary key as the tag dataframe index
+    df.set_index(df["Id"])
 
-print(f"We have {len(filtered_df)} tags matched")
+    filtered_df: pd.DataFrame
+    filtered_df = df.loc[
+        df["TagName"].isin(INTERESTING_TAGS)
+        ]
 
-# Sanity check we did not misspelt any
-for our_tag in INTERESTING_TAGS:
-    assert filtered_df["TagName"].str.contains(our_tag).any(), f"Does not know tag {our_tag}"
-        
-filtered_df.to_parquet("tags.parquet")
+    print(f"We have {len(filtered_df)} tags matched")
 
-# Show top tags
-for idx, row in filtered_df.sort_values("Count", ascending=False).iterrows():
-    print(f"{row['TagName']} with {row['Count']} posts")
+    # Sanity check we did not misspelt any
+    for our_tag in INTERESTING_TAGS:
+        assert filtered_df["TagName"].str.contains(our_tag).any(), f"Does not know tag {our_tag}"
+            
+    filtered_df.to_parquet("tags.parquet")
+
+    # Show top tags
+    for idx, row in filtered_df.sort_values("Count", ascending=False).iterrows():
+        print(f"{row['TagName']} with {row['Count']} posts")
+
+if __name__ == "__main__":
+    main()

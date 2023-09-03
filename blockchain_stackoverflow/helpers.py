@@ -82,3 +82,30 @@ def clip_to_data_available_period(
     - Don't display anything beyond 2023-05-31
     """
     return df.loc[df["CreationDate"] < end]
+
+
+def bin_to_time_with_answers(
+    df: pd.DataFrame,
+    frequency=pd.offsets.QuarterBegin(),        
+) -> pd.DataFrame:
+    """Bin So posts to a certain time bucket.
+    
+    :param frequency:
+        groupby(freq).
+
+        ``QS`` for quarter start.
+
+        ``MS`` for month start.
+
+    :return:
+        Series (period start timestamp, post count)
+    """
+    
+    post_counts_month_df = pd.DataFrame()
+    grouped_df = df.groupby([pd.Grouper(key='CreationDate', freq=frequency)])
+    
+    post_counts_month_df["post_count"] = grouped_df['CreationDate'].count()
+    post_counts_month_df["answer_count"] = grouped_df['AnswerCount'].sum()
+    post_counts_month_df["answer_to_posts_ratio"] = post_counts_month_df["answer_count"] / post_counts_month_df["post_count"]
+    # post_counts_month_df = post_counts_month_df.set_index("CreationDate")
+    return post_counts_month_df
