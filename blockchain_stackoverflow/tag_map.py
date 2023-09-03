@@ -30,6 +30,8 @@ INTERESTING_TAGS = {
     "avalanche",
     # "axelar", Too new
     "bitcoin",
+    "bitcoind",
+    "bitcoinj",
     "nft",
     "cryptocurrency",
     "bitcoin",
@@ -62,7 +64,10 @@ INTERESTING_TAGS = {
     "xrp",
     "rippled",
     "stellar",
-    "eos"
+    "eos",
+    "litecoin",
+    "dogecoin-api",
+
 }
 
 df = pd.read_csv("csv/Tags.csv")

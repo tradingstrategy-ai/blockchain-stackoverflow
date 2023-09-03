@@ -6,23 +6,44 @@ Scripts to explore and plot out data for blockchain developer communities.
 - [Stackoverflow data dump XML to CSV data converter](https://github.com/SkobelevIgor/stackexchange-xml-converter)
 - [Stackoverflow stops distributing data dumps](https://meta.stackoverflow.com/a/425121/315168)
 - [The fall of StackOverlow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow)  
-- This repo uses `git-lfs`
+- This repo uses [git-lfs](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
 
-Dataset size is ~40 GB and you are going some ~200 GB free disk space to work on this.
-I recommend you work on a remote server using Visual Studio Code remote extensions.
+# Get started
+
+Check out files:
+
+```shell
+git clone ...
+cd blockchain-stackoverflow
+git lfs fetch
+```
+
+Create Python environment:
+
+```
+poetry shell
+poetry install
+```
 
 # Usage
 
-First download the data from the archive.
+After you have Python environment and large files set up, you can open [research.ipynb](./research.ipynb) in your notebook editor (Visual Studio Code)
+and point the Python interpreter to the environment created with Poetry.
+
+
+# Recreating datasets
+
+We supply [./blockchain-questions.parquet](./blockchain-questions.parquet)
+with the Github repository. You might want to update this dataset
+as soon as StackOverflow starts to re-publish their data dumps.
+
+To re-create the dataset you need ~200 GB free disk space.
+We recommend you work on a remote server using Visual Studio Code remote extensions.
 
 We need
 
 - Posts dataset
 - Tags dataset
-
-```shell
-wget https://archive.org/download/stackexchange/stackoverflow.com-Tags.7z
-```
 
 ## Creating tag map
 
@@ -32,6 +53,7 @@ we can use to navigate the StackOverflow posts dump.
 Create tags CSV file we can import to Pandas:
 
 ```shell
+wget https://archive.org/download/stackexchange/stackoverflow.com-Tags.7z
 7z x stackoverflow.com-Tags.7z
 ./converter --source-path Tags.xml --result-format csv --store-to-dir csv
 ```
@@ -51,38 +73,7 @@ solidity with 6534 posts
 svelte with 4932 posts
 hyperledger with 3938 posts
 smartcontracts with 2989 posts
-web3js with 2333 posts
-sveltekit with 1969 posts
-bitcoin with 1753 posts
-solana with 1211 posts
-truffle with 1088 posts
-binance with 990 posts
-cryptocurrency with 944 posts
-ethers.js with 741 posts
-nft with 717 posts
-hardhat with 665 posts
-nearprotocol with 626 posts
-web3py with 565 posts
-chainlink with 486 posts
-uniswap with 238 posts
-openzeppelin with 238 posts
-binance-smart-chain with 237 posts
-brownie with 236 posts
-anchor-solana with 193 posts
-tron with 175 posts
-cosmos with 138 posts
-hedera-hashgraph with 109 posts
-near with 102 posts
-elrond with 94 posts
-cardano with 80 posts
-cosmos-sdk with 51 posts
-matic with 42 posts
-avalanche with 32 posts
-vyper with 22 posts
-ton with 10 posts
-web3 with 3 posts
-foundry-forge with 2 posts
-foundry-rs with 1 posts
+...
 ```
 
 ## Downloading and extracting the full posts dataset
