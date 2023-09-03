@@ -16,6 +16,7 @@ ipdb = "^0.13.13"
 fastparquet = "^2023.8.0"
 ipykernel = "^6.25.1"
 matplotlib = "^3.7.2"
+tqdm = "^4.66.1"
 
 
 [build-system]

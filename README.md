@@ -107,6 +107,7 @@ And then after two hours:
 ```shell
 7z x download/stackexchange/stackoverflow.com-Posts.7z
 ./converter --source-path Posts.xml --result-format csv --store-to-dir csv
+rm Posts.xml  # Save 95 GB space
 ipython create-reduced-dataset.ipynb
 ```
 
