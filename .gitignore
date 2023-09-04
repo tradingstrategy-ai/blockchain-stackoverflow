@@ -12,3 +12,4 @@ node_modules
 # and we have a monthly binned
 # counts availble as another file
 all-creation-dates.parquet
+.vscode

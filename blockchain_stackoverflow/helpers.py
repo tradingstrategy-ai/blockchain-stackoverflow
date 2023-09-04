@@ -1,5 +1,6 @@
 """Data analysis helpers."""
 from typing import Iterable, TypeAlias
+import matplotlib
 import pandas as pd
 
 
@@ -109,3 +110,8 @@ def bin_to_time_with_answers(
     post_counts_month_df["answer_to_posts_ratio"] = post_counts_month_df["answer_count"] / post_counts_month_df["post_count"]
     # post_counts_month_df = post_counts_month_df.set_index("CreationDate")
     return post_counts_month_df
+
+#: See https://stackoverflow.com/a/51734441/315168
+#:
+#:
+axis_formatter_with_separator = matplotlib.ticker.FuncFormatter(lambda x, p: format(int(x), ','))

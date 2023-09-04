@@ -36,3 +36,10 @@ def entertain_me():
     matplotlib.rcParams['figure.figsize'] = (15, 15)
 
     load_matplotlib_local_fonts()
+
+    # Disable scientific notation on axes
+    # https://stackoverflow.com/a/28373421/315168
+    matplotlib.rcParams["axes.formatter.limits"] = (-99, 99)
+
+    # English decimal separator
+    matplotlib.rcParams["axes.formatter.use_locale"] = True

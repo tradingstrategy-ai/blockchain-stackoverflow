@@ -1,29 +1,32 @@
 # StackExchange blockchain data exploration scripts
 
-Scripts to explore and plot out data for blockchain developer communities.
+This is a data research how blockchain development has changed over the years,
+based on the most popular programmers' forum, StackOverflow.com data dumps.
 
-- [Original data dumps](https://archive.org/details/stackexchange)
-- [Data dump description](https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-the-public-data-dump-and-sede/2678#2678)
-- [Stackoverflow data dump XML to CSV data converter](https://github.com/SkobelevIgor/stackexchange-xml-converter)
-- [Stackoverflow stops distributing data dumps](https://meta.stackoverflow.com/a/425121/315168)
-- [The fall of StackOverlow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow)  
-- This repo uses [git-lfs](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
+[Read the research report](./research.ipynb).
+
+# Prerequisites
+
+If you want to use this notebook for your own research you need to 
+
+- Know Python and UNIX shell basics
+- Have Python 3.11 installed
+- Have Poetry installed
 
 # Get started
 
-Check out files:
+Check out files with `git-lfs`:
 
 ```shell
 git clone ...
 cd blockchain-stackoverflow
 git lfs install
-git lfs fetch
-git lfs checkout
+git lfs pull
 ```
 
 Create Python environment:
 
-```
+```shell
 poetry shell
 poetry install
 ```
@@ -132,3 +135,13 @@ a graph of the question counts:
 ```shell
 ipython create-baseline.ipynb  # Or use Visual Studio Code
 ```
+
+# Useful links and background
+
+- [Original data dumps](https://archive.org/details/stackexchange)
+- [Data dump description](https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-the-public-data-dump-and-sede/2678#2678)
+- [Stackoverflow data dump XML to CSV data converter](https://github.com/SkobelevIgor/stackexchange-xml-converter)
+- [Stackoverflow stops distributing data dumps](https://meta.stackoverflow.com/a/425121/315168)
+- [The fall of StackOverlow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow)  
+- This repo uses [git-lfs](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
+
