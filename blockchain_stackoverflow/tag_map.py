@@ -51,6 +51,7 @@ INTERESTING_TAGS = {
     "bitcoin",
     "bitcoind",
     "bitcoinj",
+    "bitcoinlib",
     "nft",
     "metaplex",
     "opensea",
@@ -78,12 +79,14 @@ INTERESTING_TAGS = {
     "coinbase-api",
     "kraken.com",
     "etherscan",
+    "infura",
     # "svelte",  benchmark tags
     # "sveltekit",  benchmark tags
     "hardhat",
     "truffle",
     "brownie",
     "ethers.js",
+    "wagmi",
     "openzeppelin",
     "smartcontracts",
     "tron",
@@ -106,6 +109,19 @@ INTERESTING_TAGS = {
     # arweave no questions
     # storj no questions
     "bigchaindb",
+}
+
+OTHER_TAGS = {
+    "svelte",
+    "react",
+    "vue",
+    "angular",
+    "jquery",
+    "python",
+    "javascript",
+    "typescript",
+    "php",
+    "sql",
 }
 
 def main():
@@ -134,6 +150,19 @@ def main():
     # Show top tags
     for idx, row in filtered_df.sort_values("Count", ascending=False).iterrows():
         print(f"{row['TagName']} with {row['Count']} posts")
+
+    other_tags_df: pd.DataFrame
+    other_tags_df = df.loc[
+        df["TagName"].isin(OTHER_TAGS)
+        ]
+
+    print(f"We have {len(other_tags_df)} tags matched")
+
+    # Sanity check we did not misspelt any
+    for our_tag in OTHER_TAGS:
+        assert filtered_df["TagName"].str.contains(our_tag).any(), f"Does not know tag {our_tag}"
+            
+    filtered_df.to_parquet("tags.parquet")        
 
 if __name__ == "__main__":
     main()
