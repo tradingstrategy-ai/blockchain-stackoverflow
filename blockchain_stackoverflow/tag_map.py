@@ -111,17 +111,18 @@ INTERESTING_TAGS = {
     "bigchaindb",
 }
 
+#: Unrelated technologies we use as a benchmark
 OTHER_TAGS = {
     "svelte",
-    "react",
-    "vue",
+    "reactjs",
+    "vue.js",
     "angular",
     "jquery",
     "python",
-    "javascript",
-    "typescript",
     "php",
     "sql",
+    "mongodb",
+    "firebase",
 }
 
 def main():
@@ -160,9 +161,9 @@ def main():
 
     # Sanity check we did not misspelt any
     for our_tag in OTHER_TAGS:
-        assert filtered_df["TagName"].str.contains(our_tag).any(), f"Does not know tag {our_tag}"
+        assert other_tags_df["TagName"].str.contains(our_tag).any(), f"Does not know tag {our_tag}"
             
-    filtered_df.to_parquet("tags.parquet")        
+    other_tags_df.to_parquet("other_tags.parquet")        
 
 if __name__ == "__main__":
     main()
