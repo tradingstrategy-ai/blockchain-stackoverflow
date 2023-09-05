@@ -33,7 +33,7 @@ def entertain_me():
     logging.getLogger('matplotlib.font_manager').disabled = True
 
     # Plot larger
-    matplotlib.rcParams['figure.figsize'] = (15, 15)
+    matplotlib.rcParams['figure.figsize'] = (12, 12)
 
     load_matplotlib_local_fonts()
 
