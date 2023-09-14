@@ -118,8 +118,6 @@ OTHER_TAGS = {
     "vue.js",
     "angular",
     "jquery",
-    "python",
-    "php",
     "sql",
     "mongodb",
     "firebase",
@@ -149,6 +147,8 @@ def main():
     filtered_df.to_parquet("tags.parquet")
 
     # Show top tags
+    print("Top blockchain tags")
+    print("-" * 80)
     for idx, row in filtered_df.sort_values("Count", ascending=False).iterrows():
         print(f"{row['TagName']} with {row['Count']} posts")
 
@@ -163,7 +163,13 @@ def main():
     for our_tag in OTHER_TAGS:
         assert other_tags_df["TagName"].str.contains(our_tag).any(), f"Does not know tag {our_tag}"
             
-    other_tags_df.to_parquet("other_tags.parquet")        
+    other_tags_df.to_parquet("other-tags.parquet")        
+
+    # Show top tags
+    print("Top other tags")
+    print("-" * 80)
+    for idx, row in other_tags_df.sort_values("Count", ascending=False).iterrows():
+        print(f"{row['TagName']} with {row['Count']} posts")
 
 if __name__ == "__main__":
     main()
