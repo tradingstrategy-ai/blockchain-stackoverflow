@@ -33,9 +33,13 @@ poetry install
 
 # Usage
 
-After you have Python environment and large files set up, you can open [research.ipynb](./research.ipynb) in your notebook editor (Visual Studio Code)
-and point the Python interpreter to the environment created with Poetry.
+After you have Python environment and large files set up, you can open [research.ipynb](./research.ipynb) in your notebook editor (Visual Studio Code) and point the Python interpreter to the environment created with Poetry.
 
+Alternatively you can open the notebook using stock Jupyter and the web browser
+
+```shell
+jupyter notebook research.ipynb
+```
 
 # Recreating datasets
 

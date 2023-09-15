@@ -43,3 +43,8 @@ def entertain_me():
 
     # English decimal separator
     matplotlib.rcParams["axes.formatter.use_locale"] = True
+
+    # Matplotlib developer interface and memory management are unideal
+    # https://stackoverflow.com/questions/27476642/matplotlib-get-rid-of-max-open-warning-output
+    matplotlib.rcParams.update({'figure.max_open_warning': 0})
+    

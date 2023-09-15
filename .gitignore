@@ -13,3 +13,6 @@ node_modules
 # counts availble as another file
 all-creation-dates.parquet
 .vscode
+
+# jupyter notebook creates
+.ipynb_checkpoints/
