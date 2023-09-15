@@ -16,7 +16,7 @@ INTERESTING_TAGS = {
     "evm",
     "erc20",
     "solidity",
-    "web3",
+    # "web3",
     "vyper",
     "assemblyscript",
     "web3js",

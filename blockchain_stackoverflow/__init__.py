@@ -5,6 +5,7 @@ Shared across notebooks.
 
 import logging
 import os
+import warnings
 
 import matplotlib
 import matplotlib.font_manager as font_manager
@@ -47,4 +48,9 @@ def entertain_me():
     # Matplotlib developer interface and memory management are unideal
     # https://stackoverflow.com/questions/27476642/matplotlib-get-rid-of-max-open-warning-output
     matplotlib.rcParams.update({'figure.max_open_warning': 0})
+
+    # Get rid of all matplotlib warnings,
+    # as there are some that are irrelevant
+    warnings.filterwarnings( "ignore", module = "matplotlib\..*" )
+    
     
