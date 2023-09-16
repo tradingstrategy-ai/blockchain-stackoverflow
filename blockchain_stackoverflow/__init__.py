@@ -9,6 +9,7 @@ import warnings
 
 import matplotlib
 import matplotlib.font_manager as font_manager
+import matplotlib_inline
 
 
 def load_matplotlib_local_fonts():
@@ -33,8 +34,9 @@ def entertain_me():
     # https://stackoverflow.com/a/58393562/315168
     logging.getLogger('matplotlib.font_manager').disabled = True
 
-    # Plot larger
+    # Plot larger and high DPI images
     matplotlib.rcParams['figure.figsize'] = (12, 12)
+    matplotlib.rcParams['figure.dpi'] = 400
 
     load_matplotlib_local_fonts()
 
@@ -53,5 +55,11 @@ def entertain_me():
     # as there are some that are irrelevant
     warnings.filterwarnings("ignore", module = "pandas\..*" )
     warnings.filterwarnings("ignore", module = "matplotlib\..*" )
+
+    # Because we use a special font
+    # we want to raster theimage output,
+    # even though this will make image quality lower 
+    # on various devices
+    matplotlib_inline.backend_inline.set_matplotlib_formats("png")
     
     

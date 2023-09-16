@@ -16,3 +16,5 @@ all-creation-dates.parquet
 
 # jupyter notebook creates
 .ipynb_checkpoints/
+html-export/*
+.DS_Store
