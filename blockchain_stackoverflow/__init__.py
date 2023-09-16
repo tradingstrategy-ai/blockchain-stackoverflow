@@ -51,6 +51,7 @@ def entertain_me():
 
     # Get rid of all matplotlib warnings,
     # as there are some that are irrelevant
-    warnings.filterwarnings( "ignore", module = "matplotlib\..*" )
+    warnings.filterwarnings("ignore", module = "pandas\..*" )
+    warnings.filterwarnings("ignore", module = "matplotlib\..*" )
     
     
