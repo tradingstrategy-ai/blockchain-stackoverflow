@@ -140,6 +140,14 @@ a graph of the question counts:
 ipython create-baseline.ipynb  # Or use Visual Studio Code
 ```
 
+# Exporting Jupyter Notebook as Ghost blog post
+
+First let's convert the notebook to a static HTML:
+
+```
+
+```
+
 # Useful links and background
 
 - [Original data dumps](https://archive.org/details/stackexchange)
