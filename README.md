@@ -142,11 +142,13 @@ ipython create-baseline.ipynb  # Or use Visual Studio Code
 
 # Exporting Jupyter Notebook as Ghost blog post
 
-First let's convert the notebook to a static HTML:
+First let's [convert the notebook to a static HTML](https://stackoverflow.com/a/77117494/315168):
 
+```shell
+jupyter nbconvert --to=html --no-input --embed-images --output-dir html-export research.ipynb
 ```
 
-```
+Then you can open `html-export/research.html` in your web browser and copy-paste content to the Ghost blog post editor.
 
 # Useful links and background
 
