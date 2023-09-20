@@ -94,6 +94,7 @@ INTERESTING_TAGS = {
     "hyperledger-fabric",
     "hyperledger-composer",
     "hyperledger-chaincode",
+    "corda",
     "scrypto",
     "move-lang",
     "aptos",
