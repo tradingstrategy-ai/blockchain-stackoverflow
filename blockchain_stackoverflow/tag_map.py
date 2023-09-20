@@ -110,6 +110,7 @@ INTERESTING_TAGS = {
     # arweave no questions
     # storj no questions
     "bigchaindb",
+    "internet-computer",
 }
 
 #: Unrelated technologies we use as a benchmark
