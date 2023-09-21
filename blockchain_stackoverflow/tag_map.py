@@ -58,6 +58,7 @@ INTERESTING_TAGS = {
     "opensea",
     "wallet-connect",
     "metamask",
+    "trustwallet",
     "decentralized-applications",
     "cryptocurrency",
     "hedera",
