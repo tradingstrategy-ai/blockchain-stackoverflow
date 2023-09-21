@@ -75,7 +75,7 @@ def create_binned_df_by_tags(
 
 def clip_to_data_available_period(
     df: pd.DataFrame,
-    end=pd.Timestamp("2023-05-31")
+    end=pd.Timestamp("2023-08-31")
 ):
     """Make sure we have data clipped correctly.
     

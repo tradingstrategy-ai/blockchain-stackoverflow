@@ -63,12 +63,12 @@ we can use to navigate the StackOverflow posts dump.
 Create tags CSV file we can import to Pandas:
 
 ```shell
-wget https://archive.org/download/stackexchange/stackoverflow.com-Tags.7z
+wget -O stackoverflow.com-Tags.7z https://archive.org/download/stackexchange/stackoverflow.com-Tags.7z
 7z x stackoverflow.com-Tags.7z
 ./converter --source-path Tags.xml --result-format csv --store-to-dir csv
 ```
 
-Then we create `tags.json` using our script:
+Then we create `tags.parquet` using our script:
 
 ```shell
 python blockchain_stackoverflow/tag_map.py 
@@ -82,8 +82,7 @@ blockchain with 6637 posts
 solidity with 6534 posts
 svelte with 4932 posts
 hyperledger with 3938 posts
-smartcontracts with 2989 posts
-...
+smartcontracts with 2989 posts...
 ```
 
 ## Downloading and extracting the full posts dataset
@@ -99,6 +98,12 @@ npm install
 node_modules/.bin/webtorrent --select stackoverflow.com-Posts.7z stackexchange_archive.torrent 
 # 658 = index for Posts.7z
 node_modules/.bin/webtorrent --select 658 stackexchange_archive.torrent 
+```
+
+Or HTTPS:
+
+```shell
+wget -O download/stackexchange/stackoverflow.com-Posts.7z https://archive.org/download/stackexchange/stackoverflow.com-Posts.7z
 ```
 
 ![Webtorrent downloading](screenshots/webtorrent.png)

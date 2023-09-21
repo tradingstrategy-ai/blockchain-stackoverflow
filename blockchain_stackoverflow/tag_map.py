@@ -25,6 +25,7 @@ INTERESTING_TAGS = {
     "web3dart",
     "web3-java",
     "go-ethereum",
+    "nethereum",
     "geth",
     "web3",
     "remix",
@@ -47,7 +48,7 @@ INTERESTING_TAGS = {
     "anchor-solana",
     "solana-py",
     "avalanche",
-    # "axelar", Too new
+    "axelar", 
     "bitcoin",
     "bitcoind",
     "bitcoinj",
@@ -78,12 +79,14 @@ INTERESTING_TAGS = {
     "binance",
     "coinbase-api",
     "kraken.com",
+    "huobi",
     "etherscan",
     "infura",
     # "svelte",  benchmark tags
     # "sveltekit",  benchmark tags
     "hardhat",
     "truffle",
+    "ganache",
     "brownie",
     "ethers.js",
     "wagmi",
@@ -103,6 +106,7 @@ INTERESTING_TAGS = {
     "xrp",
     "rippled",
     "stellar",
+    "stellar.js",
     "eos",
     "litecoin",
     "dogecoin-api",
@@ -111,6 +115,8 @@ INTERESTING_TAGS = {
     # storj no questions
     "bigchaindb",
     "internet-computer",
+    "ledger-nano-s",
+    "hardware-wallet",
 }
 
 #: Unrelated technologies we use as a benchmark
