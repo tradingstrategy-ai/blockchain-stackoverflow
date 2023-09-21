@@ -16,6 +16,7 @@ INTERESTING_TAGS = {
     "evm",
     "erc20",
     "solidity",
+    "ether",
     # "web3",
     "vyper",
     "assemblyscript",
@@ -60,6 +61,7 @@ INTERESTING_TAGS = {
     "metamask",
     "trustwallet",
     "decentralized-applications",
+    "decentralized-identity",
     "cryptocurrency",
     "hedera",
     "hedera-hashgraph",
@@ -109,6 +111,7 @@ INTERESTING_TAGS = {
     "rippled",
     "stellar",
     "stellar.js",
+    "monero",
     "eos",
     "litecoin",
     "dogecoin-api",
@@ -119,6 +122,7 @@ INTERESTING_TAGS = {
     "internet-computer",
     "ledger-nano-s",
     "hardware-wallet",
+    "mining",
 }
 
 #: Unrelated technologies we use as a benchmark
