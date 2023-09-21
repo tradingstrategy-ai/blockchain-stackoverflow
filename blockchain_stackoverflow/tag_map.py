@@ -97,6 +97,7 @@ INTERESTING_TAGS = {
     "hyperledger-fabric",
     "hyperledger-composer",
     "hyperledger-chaincode",
+    "hyperledger-besu",
     "corda",
     "scrypto",
     "move-lang",
