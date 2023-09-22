@@ -128,13 +128,20 @@ INTERESTING_TAGS = {
 #: Unrelated technologies we use as a benchmark
 OTHER_TAGS = {
     "svelte",
+    "sveltekit",
     "reactjs",
     "vue.js",
+    "alpine.js",
+    "htmx",
+    "ember.js",
     "angular",
     "jquery",
     "sql",
     "mongodb",
     "firebase",
+    "tailwind",
+    "twitter-bootstrap",
+    "material-ui",
 }
 
 def main():

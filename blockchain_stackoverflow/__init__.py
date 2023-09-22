@@ -36,7 +36,7 @@ def entertain_me():
 
     # Plot larger and high DPI images
     matplotlib.rcParams['figure.figsize'] = (12, 12)
-    matplotlib.rcParams['figure.dpi'] = 400
+    matplotlib.rcParams['figure.dpi'] = 200
 
     load_matplotlib_local_fonts()
 
